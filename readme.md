@@ -1,11 +1,9 @@
 Implametation Neural Network with Support Vector Machines (SVMs) for Classification
 ===
 
-group name: HOTPOT
+*This project is made by Binshuai Wang, Shan Gao, Xi Yang, Ziyi Zhou.
 
-group members: Binshuai Wang, Shan Gao, Xi Yang, Ziyi Zhou
-
-github_homepage: https://github.com/DRKWang/STA208_SPRING2020
+*Homepage: https://github.com/DRKWang/STA208_SPRING2020
 
 *This project was inspired by Y. Tang's [Deep Learning using Linear Support Vector Machines](https://arxiv.org/abs/1306.0239)
 (2013), and by Abien Fred M. Agarap's [An Architecture Combining Convolutional Neural Network (CNN) and Support Vector Machine (SVM) for Image Classification](https://arxiv.org/pdf/1712.03541)
@@ -24,7 +22,12 @@ Then, go to the repository's directory, and open the following notebooks to chec
 We also encapsulate the DNN with SVMs as a class, like a model in sklearn.
 
 - using the following code to build a model
-```model = CNN_softmax()```
+``` model = CNN_softmax_and_SVM.CNN_softmax( num_classes = 10, 
+                     conv1_filters = 32, # number of filters for 1st conv layer.
+                     conv2_filters = 64, # number of filters for 2nd conv layer.
+                     fc1_units = 3072, # number of neurons for 1st fully-connected layer.
+                     kernel_len = 5)
+```
 
 - using the following code to fit the model
 ```model.fit(x_train,y_train) ```
