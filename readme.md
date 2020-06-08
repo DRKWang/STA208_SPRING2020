@@ -15,8 +15,12 @@ Then, go to the repository's directory, and open the following notebooks to chec
 - DNN on MNIST.ipynb
 - CNN on CIFAR_10.ipynb
 - 
+## Implementations
+
 
 ## Results
+
+# 1. DNN with SVM v.s. DNN with softmax on MNIST
 
 The hyperparameters used in this project were manually assigned, and not through optimization.
 
@@ -49,44 +53,4 @@ The red plot refers to the training accuracy and loss of CNN-Softmax, with a tes
 On the other hand, the light blue plot refers to the training accuracy and loss of CNN-SVM, with a test accuracy of
 90.71999788284302%. The result on CNN-Softmax corroborates the finding by [zalandoresearch](https://github.com/zalandoresearch) on [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist#benchmark).
 
-## Citation
-To cite the paper, kindly use the following BibTex entry:
-```
-@article{agarap2017architecture,
-  title={An Architecture Combining Convolutional Neural Network (CNN) and Support Vector Machine (SVM) for Image Classification},
-  author={Agarap, Abien Fred},
-  journal={arXiv preprint arXiv:1712.03541},
-  year={2017}
-}
-```
 
-To cite the repository/software, kindly use the following BibTex entry:
-```
-@misc{abien_fred_agarap_2017_1098369,
-  author       = {Abien Fred Agarap},
-  title        = {AFAgarap/cnn-svm v0.1.0-alpha},
-  month        = dec,
-  year         = 2017,
-  doi          = {10.5281/zenodo.1098369},
-  url          = {https://doi.org/10.5281/zenodo.1098369}
-}
-```
-
-## License
-```
-Convolutional Neural Network with Support Vector Machine
-Copyright (C) 2017-2020  Abien Fred Agarap
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published
-by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-```
