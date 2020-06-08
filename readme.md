@@ -128,7 +128,7 @@ We may claim that in this case, the second model has a better performance.
 The experiments were conducted on a laptop computer with Intel Core(TM) i5-6300HQ CPU @ 2.30GHz x 4, 16GB of DDR3 RAM,
 and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
 
-![](figures/softmax_fer_accuracy.png), ![](figures/svm_fer_loss), ![](figures/softmax_fer_loss.png), ![](figures/svm_loss_fer.png)
+![](figures/softmax_fer_accuracy.png), ![](figures/svm_fer_loss.png), ![](figures/softmax_fer_loss.png), ![](figures/svm_loss_fer.png)
 
 **Figure 3. Training accuracy and loss of CNN-Softmax and CNN-SVM on fer-13.**
 
