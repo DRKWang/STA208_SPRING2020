@@ -35,9 +35,10 @@ The hyperparameters used on MNIST were manually assigned, and not through optimi
 The experiments were conducted on a laptop computer with Intel Core(TM) i5-6300HQ CPU @ 2.30GHz x 4, 16GB of DDR3 RAM,
 and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
 
-![](figures/DNN_SVM on MNIST.jpg)
+![](figures/softmax1.png), ![](figures/SVM1.png), ![](figures/softmax2.png), ![](figures/SVM2.png)
 
-**Figure 1. Training accuracy (left) and loss (right) of CNN-Softmax and CNN-SVM on [MNIST](http://yann.lecun.com/exdb/mnist/).**
+
+**Figure 1. Training accuracy and loss of CNN-Softmax and CNN-SVM on [MNIST](http://yann.lecun.com/exdb/mnist/).**
 
 #### 2. CNN with SVM v.s. CNN with softmax on CIFAR_10
 
