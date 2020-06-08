@@ -22,21 +22,13 @@ Then, go to the repository's directory, and open the following notebooks to chec
 We also encapsulate the DNN with SVMs as a class, like a model in sklearn.
 
 - using the following code to build a model
-``` model = CNN_softmax_and_SVM.CNN_softmax( num_classes = 10, 
-                     conv1_filters = 32, # number of filters for 1st conv layer.
-                     conv2_filters = 64, # number of filters for 2nd conv layer.
-                     fc1_units = 3072, # number of neurons for 1st fully-connected layer.
-                     kernel_len = 5)
-```
+``` model = CNN_softmax_and_SVM.CNN_SVM()```
 
 - using the following code to fit the model
 ```model.fit(x_train,y_train) ```
 
 - using the following code to evaluate the testset
 ```model.evaluate(x_test,y_test)```
-
-
-- Facial_Expression_Recognition.ipynb
 
 ## Implementations
 
