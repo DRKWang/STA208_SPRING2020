@@ -59,7 +59,7 @@ We also meet the problem that the graph is colorful. In this case, we consider o
 
 ## Results
 
-#### 1. DNN with SVM v.s. DNN with softmax on MNIST
+#### 1. DNN with SVM v.s. DNN with softmax on [MNIST](http://yann.lecun.com/exdb/mnist/).
 
 The hyperparameters used on MNIST were manually assigned, and not through optimization.
 
@@ -75,13 +75,13 @@ and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
 
 ![](figures/softmax1.png), ![](figures/SVM1.png), ![](figures/softmax2.png), ![](figures/SVM2.png)
 
-**Figure 1. Training accuracy and loss of CNN-Softmax and CNN-SVM on [MNIST](http://yann.lecun.com/exdb/mnist/).**
+**Figure 1. Training accuracy and loss of CNN-Softmax and CNN-SVM on MNIST**
 
 We used a simple fully connected model by first performing PCA from 784 dimensions down to 70 dimensions. The data is then divided up into 300 minibatches of 200 samples each. We trained using stochastic gradient descent with momentum on these 300 minibatches for 400 epochs, totaling 120K weight updates. To prevent overftting and critical to achieving good results, a lot of Gaussian noise is added to the input. Noise of standard deviation of 1.0 is added.
 
 Two hidden layers of 512 units each is followed by a softmax or a L2-SVM. The accuracy of DNN-softmax on the testset is 0.9789. The accuracy of DNN-SVM on the testset is 0.9757. There are no problems about overfitting.
 
-#### 2. CNN with SVM v.s. CNN with softmax on CIFAR_10
+#### 2. CNN with SVM v.s. CNN with softmax on [CIFAR_10](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 ##### parameters of CIFAR_10 dataset
 |features|parameters|
@@ -99,13 +99,13 @@ Two hidden layers of 512 units each is followed by a softmax or a L2-SVM. The ac
 
 ![](figures/CNN-softmax_acc_C.png), ![](figures/CNN-SVM_acc_C.png),![](figures/CNN-softmax_loss_C.png),![](figures/CNN-SVM_loss_C.png)
 
-**Figure 2. Training accuracy and loss of CNN-Softmax and CNN-SVM on [CIFAR_10](https://www.cs.toronto.edu/~kriz/cifar.html).**
+**Figure 2. Training accuracy and loss of CNN-Softmax and CNN-SVM on CIFAR_10**
 
 For normal CNN-softmax, the accuracy of test set is 0.691.
 For CNN-SVM, the accuracy of test set is 0.725.
 We may claim that in this case, the second model has a better performance.
 
-#### 3. CNN with SVM v.s. CNN with softmax on fer-13
+#### 3. CNN with SVM v.s. CNN with softmax on [fer-13](https://www.kaggle.com/ahmedmoorsy/facial-expression).
 
 ##### parameters of fer-13 dataset
 |features|parameters|
@@ -120,7 +120,7 @@ We may claim that in this case, the second model has a better performance.
 
 ![](figures/softmax_fer_accuracy.png), ![](figures/svm_fer_accuracy.png), ![](figures/softmax_fer_loss.png), ![](figures/svm_fer_loss.png)
 
-**Figure 3. Training accuracy and loss of CNN-Softmax and CNN-SVM on [fer-13](https://www.kaggle.com/ahmedmoorsy/facial-expression).**
+**Figure 3. Training accuracy and loss of CNN-Softmax and CNN-SVM on fer-13.**
 
 For normal CNN-softmax, the accuracy of test set is 0.542. For CNN-SVM, the accuracy of test set is 0.549.
 We may claim that in this case, the second model has a slightly better performance.
