@@ -16,7 +16,34 @@ Then, go to the repository's directory, and open the following notebooks to chec
 - CNN on CIFAR_10.ipynb
 - 
 ## Implementations
+To implement the algorithm that replacing the soft-max layer with a linear support vector machine, we took several steps as following:
+#### 1 
+We tried two different methods to construct DNN and CNN model. 
 
+One of them is to use keras api to create a keras model. It is a stable and efficient way to implement neural network. However, there is no SVM model for DNN or CNN in keras and it is impossible for us to replace the softmax layer with the SVM layer. Even we try to define the SVM by ourselves to match the requests, we still fail to obtain the loss and the expression of weights and biases. So, we try the second method[1]: Constructing the NN model by defining each layer, loss function, and optimizer process. 
+
+In normal CNN model, the last layer is the softmax function and the output is the probability of each class:
+$$p_i = \frac{exp(a_i)}{\sum_{j}exp(a_j)}$$
+and the predicted class $\hat{i}$
+$$\hat{i} = \text{arg} \max p_i$$
+We use cross-entropy loss here.
+
+With Support Vector Machines, we delete the softmax layer and output the result from the last layer(Attention: No biases). Then, we define the soft margin loss[2]:
+$$\min_w w^Tw + C\sum_{n=1}^{N}\max(1-w^T x_n y_n,0)^2$$
+Actually, the primal form is L1_SVM with the standard hinge loss. But it is not differetiable so we use L2-SVM instead. 
+
+To predict the class of data:
+$$\hat{i} = \text{arg}_y \max (w^Tx)y$$
+Here we only use linear SVM. 
+
+#### 2
+To implement Multiclass SVM, we use one-vs-rest approach. For K class problems, K linear SVMs are trained independently. The output of the $k$-th SVM is
+$$a_k(x) = w^Tx$$
+and the predicted class is
+$$\text{arg}_k \max a_k(x)$$
+
+#### 3
+We also meet the problem that the graph is colorful. In this case, we consider one more parameter in our model, channel. If the data has k color channels,then we need k times parameters at the beginning. Actually, there are no much difference between the black-white data and colorful data. In implement this model for CIFAR-10 dataset.
 
 ## Results
 
@@ -42,8 +69,11 @@ and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
 
 #### 2. CNN with SVM v.s. CNN with softmax on CIFAR_10
 
+**Figure 2. Training accuracy and loss of CNN-Softmax and CNN-SVM on [CIFAR_10](https://www.cs.toronto.edu/~kriz/cifar.html).**
 
+#### 3. CNN with SVM v.s. CNN with softmax on CIFAR_10
 
+**Figure 3. Training accuracy and loss of CNN-Softmax and CNN-SVM on [MNIST](http://yann.lecun.com/exdb/mnist/).**
 
 ![](figures/accuracy-loss-fashion.png)
 
