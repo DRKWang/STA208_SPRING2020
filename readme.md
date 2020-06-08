@@ -97,6 +97,9 @@ Two hidden layers of 512 units each is followed by a softmax or a L2-SVM. The ac
 |last layer|3072|
 |local receptive fields|5*5|
 
+The experiments were conducted on a laptop computer with Intel Core(TM) i5-6300HQ CPU @ 2.30GHz x 4, 16GB of DDR3 RAM,
+and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
+
 ![](figures/CNN-softmax_acc_C.png), ![](figures/CNN-SVM_acc_C.png),![](figures/CNN-softmax_loss_C.png),![](figures/CNN-SVM_loss_C.png)
 
 **Figure 2. Training accuracy and loss of CNN-Softmax and CNN-SVM on CIFAR_10**
@@ -117,6 +120,9 @@ We may claim that in this case, the second model has a better performance.
 |pooling layer|2*2 to 1*1|
 |dropout_rate|0.4|
 |chanel|3|
+
+The experiments were conducted on a laptop computer with Intel Core(TM) i5-6300HQ CPU @ 2.30GHz x 4, 16GB of DDR3 RAM,
+and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
 
 ![](figures/softmax_fer_accuracy.png), ![](figures/svm_fer_accuracy.png), ![](figures/softmax_fer_loss.png), ![](figures/svm_fer_loss.png)
 
