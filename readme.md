@@ -1,6 +1,9 @@
 Implametation Neural Network with Support Vector Machines (SVMs) for Classification
 ===
 
+group name: HOTPOT
+
+group members: Binshuai Wang, Shan Gao, Xi Yang, Ziyi Zhou
 
 *This project was inspired by Y. Tang's [Deep Learning using Linear Support Vector Machines](https://arxiv.org/abs/1306.0239)
 (2013), and by Abien Fred M. Agarap's [An Architecture Combining Convolutional Neural Network (CNN) and Support Vector Machine (SVM) for Image Classification](https://arxiv.org/pdf/1712.03541)
