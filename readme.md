@@ -107,7 +107,7 @@ Two hidden layers of 512 units each is followed by a softmax or a L2-SVM. The ac
 |training_steps| 5000|
 |pooling layer| 2*2 to 1*1|
 |dropout rate| 0.2|
-|chanel|3|
+|channels|3|
 |first layer|32|
 |second layer|64|
 |last layer|3072|
@@ -135,7 +135,7 @@ We may claim that in this case, the second model has a better performance.
 |train_step|3000|
 |pooling layer|2*2 to 1*1|
 |dropout_rate|0.4|
-|chanel|3|
+|channels|3|
 
 The experiments were conducted on a laptop computer with Intel Core(TM) i5-6300HQ CPU @ 2.30GHz x 4, 16GB of DDR3 RAM,
 and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
