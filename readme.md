@@ -17,6 +17,9 @@ Then, go to the repository's directory, and open the following notebooks to chec
 - Facial_Expression_Recognition.ipynb
 
 ## Implementations
+
+![](figures/NN with SVMs.png),
+
 To implement the algorithm that replacing the soft-max layer with a linear support vector machine, we took several steps as following:
 #### 1 
 We tried two different methods to construct DNN and CNN model. 
