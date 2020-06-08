@@ -20,9 +20,9 @@ Then, go to the repository's directory, and open the following notebooks to chec
 
 ## Results
 
-# 1. DNN with SVM v.s. DNN with softmax on MNIST
+#### 1. DNN with SVM v.s. DNN with softmax on MNIST
 
-The hyperparameters used in this project were manually assigned, and not through optimization.
+The hyperparameters used on MNIST were manually assigned, and not through optimization.
 
 |Hyperparameters|CNN-Softmax|CNN-SVM|
 |---------------|-----------|-------|
@@ -30,6 +30,7 @@ The hyperparameters used in this project were manually assigned, and not through
 |Learning rate|1e-3|1e-3|
 |Steps|10000|10000|
 |SVM C|N/A|1|
+
 
 The experiments were conducted on a laptop computer with Intel Core(TM) i5-6300HQ CPU @ 2.30GHz x 4, 16GB of DDR3 RAM,
 and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
