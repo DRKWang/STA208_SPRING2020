@@ -14,7 +14,8 @@ Then, go to the repository's directory, and open the following notebooks to chec
 
 - DNN on MNIST.ipynb
 - CNN on CIFAR_10.ipynb
-- 
+- Facial_Expression_Recognition.ipynb
+
 ## Implementations
 To implement the algorithm that replacing the soft-max layer with a linear support vector machine, we took several steps as following:
 #### 1 
@@ -55,7 +56,7 @@ and the predicted class is
 
 
 #### 3
-We also meet the problem that the graph is colorful. In this case, we consider one more parameter in our model, channel. If the data has k color channels,then we need k times parameters at the beginning. Actually, there are no much difference between the black-white data and colorful data. In implement this model for CIFAR-10 dataset.
+We also meet the problem that the graph is colorful. In this case, we consider one more parameter in our model, channel. If the data has k color channels,then we need k times parameters at the beginning. Actually, there are no much difference between the black-white data and colorful data.
 
 ## Results
 
