@@ -16,9 +16,21 @@ Then, go to the repository's directory, and open the following notebooks to chec
 - CNN on CIFAR_10.ipynb
 - Facial_Expression_Recognition.ipynb
 
-## Implementations
+We also encapsulate the DNN with SVMs as a class, like a model in sklearn.
 
-![](figures/NN with SVMs.png)
+- using the following code to build a model
+```model = CNN_softmax()```
+
+- using the following code to fit the model
+```model.fit(x_train,y_train) ```
+
+- using the following code to evaluate the testset
+```model.evaluate(x_test,y_test)```
+
+
+- Facial_Expression_Recognition.ipynb
+
+## Implementations
 
 To implement the algorithm that replacing the soft-max layer with a linear support vector machine, we took several steps as following:
 #### 1 
