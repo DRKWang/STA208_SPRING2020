@@ -35,16 +35,16 @@ The hyperparameters used on MNIST were manually assigned, and not through optimi
 The experiments were conducted on a laptop computer with Intel Core(TM) i5-6300HQ CPU @ 2.30GHz x 4, 16GB of DDR3 RAM,
 and NVIDIA GeForce GTX 960M 4GB DDR5 GPU.
 
-![](figures/accuracy-loss-mnist.png)
+![](figures/accuracy-loss-mnist.png) 
+![](figures/accuracy-loss-mnist.png) 
 
 **Figure 1. Training accuracy (left) and loss (right) of CNN-Softmax and CNN-SVM on image classification using
 [MNIST](http://yann.lecun.com/exdb/mnist/).**
 
-The orange plot refers to the training accuracy and loss of CNN-Softmax, with a test accuracy of 99.22999739646912%.
-On the other hand, the blue plot refers to the training accuracy and loss of CNN-SVM, with a test accuracy of
-99.04000163078308%. The results do not corroborate the findings of [Tang (2017)](https://arxiv.org/abs/1306.0239)
-for [MNIST handwritten digits](http://yann.lecun.com/exdb/mnist/) classification. This may be attributed to the fact
-that no data preprocessing nor dimensionality reduction was done on the dataset for this project.
+#### 2. CNN with SVM v.s. CNN with softmax on CIFAR_10
+
+
+
 
 ![](figures/accuracy-loss-fashion.png)
 
