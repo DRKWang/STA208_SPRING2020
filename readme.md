@@ -10,7 +10,7 @@ Implametation Neural Network with Support Vector Machines (SVMs) for Classificat
 
 First, clone the project.
 
-Then, go to the repository's directory, and open the following notebooks to check the verification results on 3 different datasets ([MNIST](http://yann.lecun.com/exdb/mnist/), [CIFAR_10](https://www.cs.toronto.edu/~kriz/cifar.html), [fer_13]()).
+Then, go to the repository's directory, and open the following notebooks to check the verification results on 3 different datasets ([MNIST](http://yann.lecun.com/exdb/mnist/), [CIFAR_10](https://www.cs.toronto.edu/~kriz/cifar.html), [fer_13](https://www.kaggle.com/ahmedmoorsy/facial-expression)).
 
 - DNN on MNIST.ipynb
 - CNN on CIFAR_10.ipynb
@@ -24,34 +24,34 @@ One of them is to use keras api to create a keras model. It is a stable and effi
 
 In normal CNN model, the last layer is the softmax function and the output is the probability of each class:
 
-$$ p_i = \frac{exp(a_i)}{\sum_{j}exp(a_j)}$$
+``` $$p_i = \frac{exp(a_i)}{\sum_{j}exp(a_j)}$$```
 
-and the predicted class $\hat{i}$
+and the predicted class ```$\hat{i}$```
 
-$$\hat{i} = \text{arg} \max p_i$$
+```$$\hat{i} = \text{arg} \max p_i$$```
 
 We use cross-entropy loss here.
 
 With Support Vector Machines, we delete the softmax layer and output the result from the last layer(Attention: No biases). Then, we define the soft margin loss[2]:
 
-$$\min_w w^Tw + C\sum_{n=1}^{N}\max(1-w^T x_n y_n,0)^2$$
+```$$\min_w w^Tw + C\sum_{n=1}^{N}\max(1-w^T x_n y_n,0)^2$$```
 
 Actually, the primal form is L1_SVM with the standard hinge loss. But it is not differetiable so we use L2-SVM instead. 
 
 To predict the class of data:
 
-$$\hat{i} = \text{arg}_y \max (w^Tx)y$$
+```$$\hat{i} = \text{arg}_y \max (w^Tx)y$$```
 
 Here we only use linear SVM. 
 
 #### 2
 To implement Multiclass SVM, we use one-vs-rest approach. For K class problems, K linear SVMs are trained independently. The output of the $k$-th SVM is
 
-$$a_k(x) = w^Tx$$
+```$$a_k(x) = w^Tx$$```
 
 and the predicted class is
 
-$$\text{arg}_k \max a_k(x)$$
+```$$\text{arg}_k \max a_k(x)$$```
 
 
 #### 3
@@ -124,4 +124,10 @@ We may claim that in this case, the second model has a better performance.
 
 For normal CNN-softmax, the accuracy of test set is 0.542. For CNN-SVM, the accuracy of test set is 0.549.
 We may claim that in this case, the second model has a slightly better performance.
+
+## References
+
+[1]. https://github.com/aymericdamien/TensorFlow-Examples/tree/master/tensorflow_v2
+
+[2]. https://github.com/AFAgarap/cnn-svm/tree/35-implement-cnn-svm-tf2/model
 
