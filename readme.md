@@ -81,18 +81,35 @@ We used a simple fully connected model by first performing PCA from 784 dimensio
 
 Two hidden layers of 512 units each is followed by a softmax or a L2-SVM. The accuracy of DNN-softmax on the testset is 0.9789. The accuracy of DNN-SVM on the testset is 0.9757. There are no problems about overfitting.
 
-
 #### 2. CNN with SVM v.s. CNN with softmax on CIFAR_10
+
+##### parameters of CIFAR_10 dataset
+|features|parameters|
+|---------------|-----------|
+|data dimension|32*32|
+|optimizer|RMSprop|
+|training_steps| 5000|
+|pooling layer| 2*2 to 1*1|
+|dropout rate| 0.2|
+|chanel|3|
+|first layer|32|
+|second layer|64|
+|last layer|3072|
+|local receptive fields|5*5|
 
 ![](figures/CNN-softmax_acc_C.png), ![](figures/CNN-SVM_acc_C.png),![](figures/CNN-softmax_loss_C.png),![](figures/CNN-SVM_loss_C.png)
 
 **Figure 2. Training accuracy and loss of CNN-Softmax and CNN-SVM on [CIFAR_10](https://www.cs.toronto.edu/~kriz/cifar.html).**
 
+For normal CNN-softmax, the accuracy of test set is 0.691.
+For CNN-SVM, the accuracy of test set is 0.725.
+We may claim that in this case, the second model has a better performance.
+
 #### 3. CNN with SVM v.s. CNN with softmax on fer-13
 
 ##### parameters of fer-13 dataset
-|parameters|CNN-Softmax|CNN-SVM|
-|---------------|-----------|-------|
+|features|parameters|
+|---------------|-----------|
 |data dimension|35887*3|
 |pixels dimension|48*48|
 |optimizer|RMSprop|
@@ -103,7 +120,8 @@ Two hidden layers of 512 units each is followed by a softmax or a L2-SVM. The ac
 
 ![](figures/softmax_fer_accuracy.png), ![](figures/svm_fer_accuracy.png), ![](figures/softmax_fer_loss.png), ![](figures/svm_fer_loss.png)
 
-**Figure 3. Training accuracy and loss of CNN-Softmax and CNN-SVM on [fer](http://yann.lecun.com/exdb/mnist/).**
+**Figure 3. Training accuracy and loss of CNN-Softmax and CNN-SVM on [fer-13](https://www.kaggle.com/ahmedmoorsy/facial-expression).**
 
-
+For normal CNN-softmax, the accuracy of test set is 0.542. For CNN-SVM, the accuracy of test set is 0.549.
+We may claim that in this case, the second model has a slightly better performance.
 
