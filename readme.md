@@ -1,15 +1,12 @@
-An Architecture Combining Convolutional Neural Network (CNN) and Linear Support Vector Machine (SVM) for Image Classification
+Implametation Neural Network with Support Vector Machines (SVMs) for Classification
 ===
 
-![](https://img.shields.io/badge/DOI-cs.CV%2F1712.03541-blue.svg)
-[![DOI](https://zenodo.org/badge/113296846.svg)](https://zenodo.org/badge/latestdoi/113296846)
 ![](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
 [![PyPI](https://img.shields.io/pypi/pyversions/Django.svg)]()
 
 *This project was inspired by Y. Tang's [Deep Learning using Linear Support Vector Machines](https://arxiv.org/abs/1306.0239)
-(2013).*
+(2013), and by [An Architecture Combining Convolutional Neural Network (CNN) and Support Vector Machine (SVM) for Image Classification](https://arxiv.org/pdf/1712.03541)
 
-The full paper on this project may be read at [arXiv.org](https://arxiv.org/abs/1712.03541).
 
 ## Abstract
 
